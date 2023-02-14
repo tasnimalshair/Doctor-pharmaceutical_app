@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="707.0" prefWidth="2170.0" style="-fx-background-color: f9b198;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.ViewPatientsController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="56.0" prefWidth="600.0" style="-fx-background-color: f9b198;">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="44.0" prefWidth="249.0" style="-fx-background-color: e9967a; -fx-background-radius: 20; -fx-font-weight: bold;" text="View Patients" textFill="#ffeeee">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <TableView fx:id="table" onMouseClicked="#onClickPatient" prefHeight="575.0" prefWidth="1770.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="name" prefWidth="189.0" text="Name" />
+            <TableColumn fx:id="age" prefWidth="68.0" text="Age" />
+            <TableColumn fx:id="gender" prefWidth="102.0" text="Gender" />
+            <TableColumn fx:id="image" prefWidth="220.0" text="Image" />
+            <TableColumn fx:id="problem" prefWidth="315.0" text="Problem" />
+            <TableColumn fx:id="date" prefWidth="219.0" text="Entrance Date" />
+        </columns>
+         <VBox.margin>
+            <Insets left="100.0" right="100.0" />
+         </VBox.margin>
+      </TableView>
+      <HBox alignment="CENTER" prefHeight="66.0" prefWidth="600.0">
+         <children>
+            <Button fx:id="backBtn" mnemonicParsing="false" onAction="#backBtnAction" prefHeight="37.0" prefWidth="108.0" style="-fx-background-color: white; -fx-font-weight: bold;" text="Back">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="showBtn" mnemonicParsing="false" onAction="#showBtnAction" prefHeight="37.0" prefWidth="108.0" style="-fx-background-color: #888888; -fx-font-weight: bold;" text="Show info" textFill="#f9b198">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</VBox>
